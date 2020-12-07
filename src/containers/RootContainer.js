@@ -15,14 +15,11 @@ const ws = new WebSocket(urlWebSockets);
 const RootContainer = (props) => {
 
   useEffect(() => {
-    console.log('test')
-    console.log(ws)
+    
     ws.onopen = () => {
-      console.log('connected')
     }
 
     ws.onmessage = evt => {
-      console.log('message')
       const message = JSON.parse(evt.data)
       props.dispatchAddChartItem(message.value)
 
