@@ -34,7 +34,6 @@ const chartConfig = {
 }
 
 const ChartScreen = (props) => {
-  console.log(props.chartList)
 
   const handleClearButton = () => {
     props.dispatchClearChart();
